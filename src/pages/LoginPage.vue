@@ -10,14 +10,14 @@
           :label="$t('Email')"
           name="email"
           v-model="email"
-          :rules="[(val) => !!val || $t('form.requiredField')]"
+          :rules="[(val) => !!val || $t('form.errors.requiredField')]"
         />
         <q-input
           :label="$t('Password')"
           name="password"
           type="password"
           v-model="password"
-          :rules="[(val) => !!val || $t('form.requiredField')]"
+          :rules="[(val) => !!val || $t('form.errors.requiredField')]"
         />
         <div class="flex justify-between">
           <router-link class="link-no-style" to="/register">

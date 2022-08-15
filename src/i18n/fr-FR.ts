@@ -4,12 +4,18 @@ export default {
   Email: 'Email',
   forgotPassword: 'Mot de passe oublié ?',
   form: {
-    passwordLength:
-      'Le mot de passe doit contenir au moins {length} caractères.',
-    requiredField: 'Ce champ est requis.',
+    errors: {
+      passwordLength:
+        'Le mot de passe doit contenir au moins {length} caractères.',
+      passwordMustMatch: 'Les mots de passe ne correspondent pas.',
+      pseudoLength: 'Le pseudo doit contenir au moins {length} caractères.',
+      requiredField: 'Ce champ est requis.',
+    },
   },
   login: 'se connecter',
   Password: 'Mot de passe',
+  'Password confirmation': 'Confirmation du mot de passe',
+  Pseudo: 'Pseudo',
   register: "s'inscrire",
   reset: 'réinitialiser',
   submit: 'soumettre',
