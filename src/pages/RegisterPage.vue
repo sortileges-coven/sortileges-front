@@ -8,6 +8,7 @@
       <q-form class="q-gutter-sm" @submit="onSubmit">
         <q-input
           :label="$t('Pseudo')"
+          for="pseudo-input"
           name="pseudo"
           v-model="pseudo"
           :rules="[
@@ -19,12 +20,17 @@
         />
         <q-input
           :label="$t('Email')"
+          for="email-input"
           name="email"
           v-model="email"
-          :rules="[(val) => !!val || $t('form.errors.requiredField')]"
+          :rules="[
+            (val) => !!val || $t('form.errors.requiredField'),
+            (val) => !!val.match(EMAIL_REGEX) || $t('form.errors.email'),
+          ]"
         />
         <q-input
           :label="$t('Password')"
+          for="password-input"
           name="password"
           type="password"
           v-model="password"
@@ -37,6 +43,7 @@
         />
         <q-input
           :label="$t('Password confirmation')"
+          for="password-confirmation-input"
           name="passwordConfirmation"
           type="password"
           v-model="passwordConfirmation"
@@ -60,7 +67,11 @@
 </template>
 
 <script setup lang="ts">
-import { PASSWORD_MIN_LENGTH, PSEUDO_MIN_LENGTH } from 'src/config/const';
+import {
+  EMAIL_REGEX,
+  PASSWORD_MIN_LENGTH,
+  PSEUDO_MIN_LENGTH,
+} from 'src/config/const';
 import { ref } from 'vue';
 
 const email = ref(null);

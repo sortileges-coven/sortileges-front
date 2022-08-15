@@ -5,6 +5,7 @@ export default {
   forgotPassword: 'Mot de passe oublié ?',
   form: {
     errors: {
+      email: "L'adresse email est invalide.",
       passwordLength:
         'Le mot de passe doit contenir au moins {length} caractères.',
       passwordMustMatch: 'Les mots de passe ne correspondent pas.',
