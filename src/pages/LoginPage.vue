@@ -10,18 +10,23 @@
           :label="$t('Email')"
           name="email"
           v-model="email"
-          :rules="[(val) => !!val || $t('form.requiredField')]"
+          :rules="[(val) => !!val || $t('form.errors.requiredField')]"
         />
         <q-input
           :label="$t('Password')"
           name="password"
           type="password"
           v-model="password"
-          :rules="[(val) => !!val || $t('form.requiredField')]"
+          :rules="[(val) => !!val || $t('form.errors.requiredField')]"
         />
-        <div class="text-right">
-          <q-btn flat>{{ $t('forgotPassword') }}</q-btn>
+        <div class="flex justify-between">
+          <router-link class="link-no-style" to="/register">
+            <q-btn color="secondary">{{ $t('register') }}</q-btn>
+          </router-link>
           <q-btn :label="$t('login')" type="submit" color="primary" />
+        </div>
+        <div class="text-center">
+          <q-btn flat>{{ $t('forgotPassword') }}</q-btn>
         </div>
       </q-form>
     </div>
