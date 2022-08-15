@@ -6,6 +6,16 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/HomeLayout.vue'),
     children: [{ path: '', component: () => import('pages/HomePage.vue') }],
   },
+  {
+    path: '/login',
+    component: () => import('layouts/FullScreenLayout.vue'),
+    children: [{ path: '', component: () => import('pages/LoginPage.vue') }],
+  },
+  {
+    path: '/sign-up',
+    component: () => import('layouts/FullScreenLayout.vue'),
+    children: [{ path: '', component: () => import('pages/SignUpPage.vue') }],
+  },
 
   // Always leave this as last one,
   // but you can also remove it

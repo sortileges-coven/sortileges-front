@@ -1,8 +1,2 @@
-// app global css in SCSS form
-.cursive-font {
-  font-family: 'Mrs Saint Delafield';
-}
-
-.secondary-font {
-  font-family: 'Anton';
-}
+@import 'typography.scss';
+@import 'utils.scss';

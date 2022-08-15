@@ -20,10 +20,20 @@ import routes from './routes';
 export default route(function (/* { store, ssrContext } */) {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
-    : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory);
+    : process.env.VUE_ROUTER_MODE === 'history'
+    ? createWebHistory
+    : createWebHashHistory;
 
   const Router = createRouter({
-    scrollBehavior: () => ({ left: 0, top: 0 }),
+    // scrollBehavior fix based on https://forum.vuejs.org/t/vue-router-navigate-or-scroll-to-anchors-anchors-not-working/108218/2
+    scrollBehavior(to) {
+      if (to.hash) {
+        // BEFORE:
+        // return { selector: to.hash }
+
+        return { el: to.hash, behavior: 'smooth' };
+      }
+    },
     routes,
 
     // Leave this as is and make changes in quasar.conf.js instead!

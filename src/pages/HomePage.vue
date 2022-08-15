@@ -10,12 +10,18 @@
       <hr />
       <p>{{ $t('welcome.joinCommunity') }}</p>
       <div class="q-pa-md q-gutter-sm">
-        <q-btn>{{ $t('login') }}</q-btn>
-        <q-btn>{{ $t('register') }}</q-btn>
-        <q-btn>{{ $t('welcome.knowMore') }}</q-btn>
+        <router-link class="link-no-style" to="/login">
+          <q-btn>{{ $t('login') }}</q-btn>
+        </router-link>
+        <router-link class="link-no-style" to="/register">
+          <q-btn>{{ $t('register') }}</q-btn>
+        </router-link>
+        <router-link class="link-no-style" to="#know-more">
+          <q-btn>{{ $t('welcome.knowMore') }}</q-btn>
+        </router-link>
       </div>
     </div>
-    <div class="bg-green h-screen h-screen">Section 2</div>
+    <div id="know-more" class="bg-green h-screen h-screen">Section 2</div>
     <div class="bg-blue h-screen h-screen">Section 3</div>
   </q-page>
 </template>
@@ -28,11 +34,5 @@
   background-position: center;
   background-size: cover;
   color: #fff;
-}
-.h-screen {
-  height: 100vh;
-}
-.w-screen {
-  width: 100vw;
 }
 </style>
