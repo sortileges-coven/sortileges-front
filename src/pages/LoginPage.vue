@@ -32,6 +32,7 @@
 </template>
 
 <script setup lang="ts">
+import { PASSWORD_MIN_LENGTH } from 'src/config/const';
 import { ref } from 'vue';
 
 const email = ref(null);
