@@ -30,7 +30,7 @@
 
 <style scoped>
 .welcome-bg {
-  background-image: url('../assets/images/witch-halloween.jpg');
+  background-image: url('@/assets/images/witch-halloween.jpg');
   background-position: center;
   background-size: cover;
   color: #fff;

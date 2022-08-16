@@ -1,7 +1,7 @@
 <template>
   <q-page class="page flex flex-center column">
     <h2 class="cursive-font primary q-ma-none" color="secondary">Sortilèges</h2>
-    <div class="bg-white q-pa-lg q-ma-lg" style="width: 90%; max-width: 400px">
+    <div class="bg-white q-pa-lg q-ma-lg" style="width: 90%; max-width: 500px">
       <h1 class="text-h3 text-center q-mt-none capitalize-first">
         {{ $t('login') }}
       </h1>
@@ -20,19 +20,20 @@
           :rules="[(val) => !!val || $t('form.errors.requiredField')]"
         />
         <div class="flex justify-between">
-          <router-link class="link-no-style" to="/register">
-            <q-btn color="secondary">{{ $t('register') }}</q-btn>
-          </router-link>
-          <q-btn :label="$t('login')" type="submit" color="primary" />
+          <q-btn :label="$t('register')" color="secondary" to="/register" />
+          <q-btn
+            :outline="false"
+            :label="$t('login')"
+            type="submit"
+            color="primary"
+          />
         </div>
         <div class="text-center">
-          <q-btn flat>{{ $t('forgotPassword') }}</q-btn>
+          <q-btn flat :label="$t('forgotPassword')" />
         </div>
       </q-form>
     </div>
-    <router-link class="white-link" to="/">
-      <p>{{ $t('backHome') }}</p>
-    </router-link>
+    <q-btn :label="$t('backHome')" color="white" flat to="/" />
   </q-page>
 </template>
 
