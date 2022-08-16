@@ -1,5 +1,5 @@
 import { boot } from 'quasar/wrappers';
-import { QInput, QBtn } from 'quasar';
+import { QInput, QBtn, QSpinner } from 'quasar';
 
 export default boot(({}) => {
   QInput.props.outlined = {
@@ -13,5 +13,9 @@ export default boot(({}) => {
   QBtn.props.outline = {
     type: QBtn.props.outline,
     default: true,
+  };
+  QSpinner.props.color = {
+    type: QSpinner.props.color,
+    default: 'primary',
   };
 });

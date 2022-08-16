@@ -2,6 +2,11 @@ export default {
   about: 'à propos',
   backHome: "Retour à la page d'accueil",
   Email: 'Email',
+  errors: {
+    emailConflict: 'Cet email est déjà utilisé, veuillez en choisir un autre.',
+    server: 'A server error occured.',
+    unexpected: 'An unexpected error occured.',
+  },
   forgotPassword: 'Mot de passe oublié ?',
   form: {
     errors: {
@@ -20,6 +25,8 @@ export default {
   register: "s'inscrire",
   reset: 'réinitialiser',
   submit: 'soumettre',
+  successfulRegistration:
+    'Vous êtes désormais inscrit et pouvez vous connecter à Sortilèges !',
   welcome: {
     credits: 'Conception et développement : Laura KACZMAREK & Clément ROIG',
     headline: "L'outil magique pour sorcières et sorciers 2.0",
