@@ -1,5 +1,5 @@
 import { boot } from 'quasar/wrappers';
-import { QInput } from 'quasar';
+import { QInput, QBtn } from 'quasar';
 
 export default boot(({}) => {
   QInput.props.outlined = {
@@ -8,6 +8,10 @@ export default boot(({}) => {
   };
   QInput.props.stackLabel = {
     type: QInput.props.stackLabel,
+    default: true,
+  };
+  QBtn.props.outline = {
+    type: QBtn.props.outline,
     default: true,
   };
 });

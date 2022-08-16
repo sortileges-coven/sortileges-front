@@ -53,16 +53,17 @@
           ]"
         />
         <div class="flex justify-between">
-          <router-link class="link-no-style" to="/login">
-            <q-btn color="secondary">{{ $t('login') }}</q-btn>
-          </router-link>
-          <q-btn :label="$t('register')" type="submit" color="primary" />
+          <q-btn to="/login" color="secondary" :label="$t('login')" />
+          <q-btn
+            :outline="false"
+            :label="$t('register')"
+            type="submit"
+            color="primary"
+          />
         </div>
       </q-form>
     </div>
-    <router-link class="white-link" to="/">
-      <p>{{ $t('backHome') }}</p>
-    </router-link>
+    <q-btn :label="$t('backHome')" color="white" flat to="/" />
   </q-page>
 </template>
 
