@@ -1,7 +1,7 @@
 <template>
   <q-page class="page flex flex-center column">
     <h2 class="cursive-font primary q-ma-none" color="secondary">Sortilèges</h2>
-    <div class="bg-white q-pa-lg q-ma-lg" style="width: 90%; max-width: 400px">
+    <div class="bg-white q-pa-lg q-ma-lg" style="width: 90%; max-width: 500px">
       <h1 class="text-h3 text-center q-mt-none capitalize-first">
         {{ $t('login') }}
       </h1>

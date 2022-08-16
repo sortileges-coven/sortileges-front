@@ -14,7 +14,9 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/register',
     component: () => import('layouts/FullScreenLayout.vue'),
-    children: [{ path: '', component: () => import('pages/RegisterPage.vue') }],
+    children: [
+      { path: '', component: () => import('pages/RegisterPage/index.vue') },
+    ],
   },
 
   // Always leave this as last one,
